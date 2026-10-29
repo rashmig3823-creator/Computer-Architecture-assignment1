@@ -1,0 +1,23 @@
+Expression: 120 + 62
+Operand A: 01111000
+Operand B: 00111110
+Binary addition:
+  01111000
++ 00111110
+----------
+  10110110
+8-bit result: 10110110
+Decimal result: -74
+Arithmetic Overflow: Yes
+
+Expression: -120 + -62
+Operand A: 10001000
+Operand B: 11000010
+Binary addition:
+  10001000
++ 11000010
+----------
+  01001010
+8-bit result: 01001010
+Decimal result: 74
+Arithmetic Overflow: Yes
