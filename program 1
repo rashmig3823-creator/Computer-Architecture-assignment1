@@ -1,0 +1,45 @@
+
+def to_8bit(n):
+    return format(n & 0xFF, '08b')
+
+
+def signed_addition(a, b):
+    print("\nExpression:", a, "+", b)
+
+    # Display 8-bit 2's complement operands
+    bin_a = to_8bit(a)
+    bin_b = to_8bit(b)
+
+    print("Operand A:", bin_a)
+    print("Operand B:", bin_b)
+
+    # Perform 8-bit addition
+    result = (a + b) & 0xFF
+    result_bin = to_8bit(result)
+
+    print("Binary addition:")
+    print(" ", bin_a)
+    print("+", bin_b)
+    print("----------")
+    print(" ", result_bin)
+
+    # Convert 8-bit result to signed decimal
+    signed_result = result if result < 128 else result - 256
+
+    # Overflow occurs when same-sign operands
+    # produce a result with the opposite sign
+    overflow = ((a >= 0) == (b >= 0) and
+                (signed_result >= 0) != (a >= 0))
+
+    print("8-bit result:", result_bin)
+    print("Decimal result:", signed_result)
+
+    if overflow:
+        print("Arithmetic Overflow: Yes")
+    else:
+        print("Arithmetic Overflow: No")
+
+
+# Given expressions
+signed_addition(120, 62)
+signed_addition(-120, -62)
