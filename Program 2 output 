@@ -1,0 +1,15 @@
+Logical Left Shift
+Original binary number: 10110110
+After shift 1 : 01101100
+After shift 2 : 11011000
+After shift 3 : 10110000
+Final 8-bit result: 10110000
+Decimal result: 176
+
+Logical Right Shift
+Original binary number: 11010100
+After shift 1 : 01101010
+After shift 2 : 00110101
+After shift 3 : 00011010
+Final 8-bit result: 00011010
+Decimal result: 26
