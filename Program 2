@@ -1,0 +1,32 @@
+
+def left_shift(binary, positions):
+    print("\nLogical Left Shift")
+    print("Original binary number:", binary)
+
+    result = binary
+
+    for i in range(positions):
+        result = result[1:] + '0'
+        print("After shift", i + 1, ":", result)
+
+    print("Final 8-bit result:", result)
+    print("Decimal result:", int(result, 2))
+
+
+def right_shift(binary, positions):
+    print("\nLogical Right Shift")
+    print("Original binary number:", binary)
+
+    result = binary
+
+    for i in range(positions):
+        result = '0' + result[:-1]
+        print("After shift", i + 1, ":", result)
+
+    print("Final 8-bit result:", result)
+    print("Decimal result:", int(result, 2))
+
+
+# Given operations
+left_shift("10110110", 3)
+right_shift("11010100", 3)
